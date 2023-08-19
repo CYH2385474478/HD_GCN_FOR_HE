@@ -1,0 +1,6 @@
+√	camera.txt: 包含了每个动作序列对应的摄像机ID。摄像机ID有3个，即1、2、3。
+√	performer.txt: 包含了每个动作序列对应的演员（或者说是主题）ID。主题ID从1到40。
+√	label.txt: 包含了每个动作序列对应的动作标签。动作标签从1到60。
+√	skes_available_name.txt: 包含了所有可用的骨骼序列的名称。
+	raw_denoised_joints.pkl: 包含了每个动作序列中每一帧的关节位置信息。这些数据已经被去噪处理。
+	frames_cnt.txt: 包含了每个动作序列的帧数。

@@ -1,0 +1,1021 @@
+C:\Users\cyh23\.conda\envs\Msc\python.exe C:\Users\cyh23\Desktop\论文复现\HD-GCN-main\main.py --config ./config/nturgbd60-cross-subject/joint_com_2.yaml --device 0 
+C:\Users\cyh23\Desktop\论文复现\HD-GCN-main\main.py:592: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  default_arg = yaml.load(f)
+log_dir:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs already exist
+delete it? y/n:y
+Dir removed:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+Refresh the website of tensorboard by pressing any keys
+<class 'model.HDGCN.Model'>
+{'labeling_mode': 'spatial', 'CoM': 1}
+[ Sat Aug  5 22:32:20 2023 ] using warm up, epoch: 5
+[ Sat Aug  5 22:32:21 2023 ] Parameters:
+{'work_dir': './work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/', 'model_saved_name': './work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs', 'config': './config/nturgbd60-cross-subject/joint_com_2.yaml', 'phase': 'train', 'save_score': False, 'seed': 1, 'log_interval': 100, 'save_interval': 1, 'save_epoch': 30, 'eval_interval': 5, 'print_log': True, 'show_topk': [1, 5], 'feeder': 'feeders.feeder_ntu.Feeder', 'num_worker': 8, 'train_feeder_args': {'data_path': './data/ntu/NTU60_CS.npz', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 64, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'bone': False}, 'test_feeder_args': {'data_path': './data/ntu/NTU60_CS.npz', 'split': 'test', 'window_size': 64, 'p_interval': [0.95], 'bone': False, 'debug': False}, 'model': 'model.HDGCN.Model', 'model_args': {'num_class': 10, 'num_point': 40, 'num_person': 2, 'graph': 'graph.ntu_rgb_d_hierarchy.Graph', 'graph_args': {'labeling_mode': 'spatial', 'CoM': 1}}, 'weights': None, 'ignore_weights': [], 'base_lr': 0.01, 'step': [20, 40, 60], 'device': [0], 'optimizer': 'SGD', 'nesterov': True, 'batch_size': 32, 'test_batch_size': 32, 'start_epoch': 0, 'num_epoch': 90, 'weight_decay': 0.0004, 'lr_ratio': 0.001, 'lr_decay_rate': 0.1, 'warm_up_epoch': 5, 'loss_type': 'CE'}
+
+[ Sat Aug  5 22:32:21 2023 ] # Parameters: 356418
+[ Sat Aug  5 22:32:21 2023 ] Training epoch: 1
+100%|██████████| 3/3 [00:29<00:00,  9.98s/it]
+[ Sat Aug  5 22:32:51 2023 ] 	Mean training loss: 4.2037.  Mean training acc: 15.62%.
+[ Sat Aug  5 22:32:51 2023 ] 	Learning Rate: 0.0020
+[ Sat Aug  5 22:32:51 2023 ] 	Time consumption: [Data]68%, [Network]32%
+[ Sat Aug  5 22:32:51 2023 ] Eval epoch: 1
+100%|██████████| 3/3 [00:21<00:00,  7.16s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.07246376811594203  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:33:13 2023 ] 	Mean test loss of 3 batches: 49.68065897623698.
+[ Sat Aug  5 22:33:13 2023 ] 	Top1: 7.25%
+[ Sat Aug  5 22:33:13 2023 ] 	Top5: 43.48%
+[ Sat Aug  5 22:33:13 2023 ] Training epoch: 2
+100%|██████████| 3/3 [00:26<00:00,  8.71s/it]
+[ Sat Aug  5 22:33:39 2023 ] 	Mean training loss: 3.5557.  Mean training acc: 14.58%.
+[ Sat Aug  5 22:33:39 2023 ] 	Learning Rate: 0.0040
+[ Sat Aug  5 22:33:39 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:33:39 2023 ] Eval epoch: 2
+100%|██████████| 3/3 [00:21<00:00,  7.16s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.07246376811594203  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:34:00 2023 ] 	Mean test loss of 3 batches: 9.538927555084229.
+[ Sat Aug  5 22:34:00 2023 ] 	Top1: 7.25%
+[ Sat Aug  5 22:34:00 2023 ] 	Top5: 63.77%
+[ Sat Aug  5 22:34:00 2023 ] Training epoch: 3
+100%|██████████| 3/3 [00:26<00:00,  8.71s/it]
+[ Sat Aug  5 22:34:27 2023 ] 	Mean training loss: 2.9508.  Mean training acc: 17.71%.
+[ Sat Aug  5 22:34:27 2023 ] 	Learning Rate: 0.0060
+[ Sat Aug  5 22:34:27 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:34:27 2023 ] Eval epoch: 3
+100%|██████████| 3/3 [00:21<00:00,  7.21s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.15942028985507245  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:34:48 2023 ] 	Mean test loss of 3 batches: 4.58211874961853.
+[ Sat Aug  5 22:34:48 2023 ] 	Top1: 15.94%
+[ Sat Aug  5 22:34:48 2023 ] 	Top5: 65.22%
+[ Sat Aug  5 22:34:48 2023 ] Training epoch: 4
+100%|██████████| 3/3 [00:26<00:00,  8.72s/it]
+[ Sat Aug  5 22:35:15 2023 ] 	Mean training loss: 2.3441.  Mean training acc: 29.17%.
+[ Sat Aug  5 22:35:15 2023 ] 	Learning Rate: 0.0080
+[ Sat Aug  5 22:35:15 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 22:35:15 2023 ] Eval epoch: 4
+100%|██████████| 3/3 [00:21<00:00,  7.24s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.2318840579710145  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:35:37 2023 ] 	Mean test loss of 3 batches: 3.4298923015594482.
+[ Sat Aug  5 22:35:37 2023 ] 	Top1: 23.19%
+[ Sat Aug  5 22:35:37 2023 ] 	Top5: 60.87%
+[ Sat Aug  5 22:35:37 2023 ] Training epoch: 5
+100%|██████████| 3/3 [00:26<00:00,  8.77s/it]
+[ Sat Aug  5 22:36:03 2023 ] 	Mean training loss: 2.1685.  Mean training acc: 29.17%.
+[ Sat Aug  5 22:36:03 2023 ] 	Learning Rate: 0.0100
+[ Sat Aug  5 22:36:03 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:36:03 2023 ] Eval epoch: 5
+100%|██████████| 3/3 [00:21<00:00,  7.30s/it]
+Accuracy:  0.3333333333333333  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:36:25 2023 ] 	Mean test loss of 3 batches: 2.9998865127563477.
+[ Sat Aug  5 22:36:25 2023 ] 	Top1: 33.33%
+[ Sat Aug  5 22:36:25 2023 ] 	Top5: 72.46%
+[ Sat Aug  5 22:36:25 2023 ] Training epoch: 6
+100%|██████████| 3/3 [00:26<00:00,  8.78s/it]
+[ Sat Aug  5 22:36:51 2023 ] 	Mean training loss: 1.8987.  Mean training acc: 33.33%.
+[ Sat Aug  5 22:36:51 2023 ] 	Learning Rate: 0.0100
+[ Sat Aug  5 22:36:51 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 22:36:51 2023 ] Eval epoch: 6
+100%|██████████| 3/3 [00:21<00:00,  7.30s/it]
+Accuracy:  0.3333333333333333  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:37:13 2023 ] 	Mean test loss of 3 batches: 2.5553455352783203.
+[ Sat Aug  5 22:37:13 2023 ] 	Top1: 33.33%
+[ Sat Aug  5 22:37:13 2023 ] 	Top5: 71.01%
+[ Sat Aug  5 22:37:13 2023 ] Training epoch: 7
+100%|██████████| 3/3 [00:26<00:00,  8.84s/it]
+[ Sat Aug  5 22:37:40 2023 ] 	Mean training loss: 1.7707.  Mean training acc: 40.62%.
+[ Sat Aug  5 22:37:40 2023 ] 	Learning Rate: 0.0100
+[ Sat Aug  5 22:37:40 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 22:37:40 2023 ] Eval epoch: 7
+100%|██████████| 3/3 [00:21<00:00,  7.29s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.34782608695652173  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:38:02 2023 ] 	Mean test loss of 3 batches: 2.1730217933654785.
+[ Sat Aug  5 22:38:02 2023 ] 	Top1: 34.78%
+[ Sat Aug  5 22:38:02 2023 ] 	Top5: 76.81%
+[ Sat Aug  5 22:38:02 2023 ] Training epoch: 8
+100%|██████████| 3/3 [00:26<00:00,  8.79s/it]
+[ Sat Aug  5 22:38:28 2023 ] 	Mean training loss: 1.6914.  Mean training acc: 41.67%.
+[ Sat Aug  5 22:38:28 2023 ] 	Learning Rate: 0.0100
+[ Sat Aug  5 22:38:28 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 22:38:29 2023 ] Eval epoch: 8
+100%|██████████| 3/3 [00:22<00:00,  7.34s/it]
+Accuracy:  0.4492753623188406  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:38:51 2023 ] 	Mean test loss of 3 batches: 1.9516435464223225.
+[ Sat Aug  5 22:38:51 2023 ] 	Top1: 44.93%
+[ Sat Aug  5 22:38:51 2023 ] 	Top5: 79.71%
+[ Sat Aug  5 22:38:51 2023 ] Training epoch: 9
+100%|██████████| 3/3 [00:26<00:00,  8.86s/it]
+[ Sat Aug  5 22:39:17 2023 ] 	Mean training loss: 1.5577.  Mean training acc: 43.75%.
+[ Sat Aug  5 22:39:17 2023 ] 	Learning Rate: 0.0100
+[ Sat Aug  5 22:39:17 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:39:17 2023 ] Eval epoch: 9
+100%|██████████| 3/3 [00:22<00:00,  7.37s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.4782608695652174  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:39:40 2023 ] 	Mean test loss of 3 batches: 1.822148323059082.
+[ Sat Aug  5 22:39:40 2023 ] 	Top1: 47.83%
+[ Sat Aug  5 22:39:40 2023 ] 	Top5: 79.71%
+[ Sat Aug  5 22:39:40 2023 ] Training epoch: 10
+100%|██████████| 3/3 [00:26<00:00,  8.78s/it]
+[ Sat Aug  5 22:40:06 2023 ] 	Mean training loss: 1.5006.  Mean training acc: 47.92%.
+[ Sat Aug  5 22:40:06 2023 ] 	Learning Rate: 0.0099
+[ Sat Aug  5 22:40:06 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 22:40:06 2023 ] Eval epoch: 10
+100%|██████████| 3/3 [00:22<00:00,  7.40s/it]
+Accuracy:  0.463768115942029  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:40:28 2023 ] 	Mean test loss of 3 batches: 1.7211930354436238.
+[ Sat Aug  5 22:40:28 2023 ] 	Top1: 46.38%
+[ Sat Aug  5 22:40:28 2023 ] 	Top5: 78.26%
+[ Sat Aug  5 22:40:28 2023 ] Training epoch: 11
+100%|██████████| 3/3 [00:26<00:00,  8.85s/it]
+[ Sat Aug  5 22:40:55 2023 ] 	Mean training loss: 1.5111.  Mean training acc: 48.96%.
+[ Sat Aug  5 22:40:55 2023 ] 	Learning Rate: 0.0099
+[ Sat Aug  5 22:40:55 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:40:55 2023 ] Eval epoch: 11
+100%|██████████| 3/3 [00:22<00:00,  7.37s/it]
+Accuracy:  0.463768115942029  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:41:17 2023 ] 	Mean test loss of 3 batches: 1.6192128260930378.
+[ Sat Aug  5 22:41:17 2023 ] 	Top1: 46.38%
+[ Sat Aug  5 22:41:17 2023 ] 	Top5: 81.16%
+[ Sat Aug  5 22:41:17 2023 ] Training epoch: 12
+100%|██████████| 3/3 [00:26<00:00,  8.91s/it]
+[ Sat Aug  5 22:41:44 2023 ] 	Mean training loss: 1.3945.  Mean training acc: 53.12%.
+[ Sat Aug  5 22:41:44 2023 ] 	Learning Rate: 0.0098
+[ Sat Aug  5 22:41:44 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:41:44 2023 ] Eval epoch: 12
+100%|██████████| 3/3 [00:22<00:00,  7.45s/it]
+Accuracy:  0.4927536231884058  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:42:06 2023 ] 	Mean test loss of 3 batches: 1.516028920809428.
+[ Sat Aug  5 22:42:06 2023 ] 	Top1: 49.28%
+[ Sat Aug  5 22:42:06 2023 ] 	Top5: 79.71%
+[ Sat Aug  5 22:42:06 2023 ] Training epoch: 13
+100%|██████████| 3/3 [00:26<00:00,  8.92s/it]
+[ Sat Aug  5 22:42:33 2023 ] 	Mean training loss: 1.3422.  Mean training acc: 54.17%.
+[ Sat Aug  5 22:42:33 2023 ] 	Learning Rate: 0.0098
+[ Sat Aug  5 22:42:33 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:42:33 2023 ] Eval epoch: 13
+100%|██████████| 3/3 [00:22<00:00,  7.34s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.4927536231884058  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:42:56 2023 ] 	Mean test loss of 3 batches: 1.4135522842407227.
+[ Sat Aug  5 22:42:56 2023 ] 	Top1: 49.28%
+[ Sat Aug  5 22:42:56 2023 ] 	Top5: 84.06%
+[ Sat Aug  5 22:42:56 2023 ] Training epoch: 14
+100%|██████████| 3/3 [00:26<00:00,  8.90s/it]
+[ Sat Aug  5 22:43:22 2023 ] 	Mean training loss: 1.2787.  Mean training acc: 53.12%.
+[ Sat Aug  5 22:43:22 2023 ] 	Learning Rate: 0.0097
+[ Sat Aug  5 22:43:22 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 22:43:22 2023 ] Eval epoch: 14
+100%|██████████| 3/3 [00:22<00:00,  7.42s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.5217391304347826  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:43:45 2023 ] 	Mean test loss of 3 batches: 1.3557016452153523.
+[ Sat Aug  5 22:43:45 2023 ] 	Top1: 52.17%
+[ Sat Aug  5 22:43:45 2023 ] 	Top5: 88.41%
+[ Sat Aug  5 22:43:45 2023 ] Training epoch: 15
+100%|██████████| 3/3 [00:26<00:00,  8.92s/it]
+[ Sat Aug  5 22:44:11 2023 ] 	Mean training loss: 1.2973.  Mean training acc: 52.08%.
+[ Sat Aug  5 22:44:11 2023 ] 	Learning Rate: 0.0097
+[ Sat Aug  5 22:44:11 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:44:12 2023 ] Eval epoch: 15
+100%|██████████| 3/3 [00:22<00:00,  7.45s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.5362318840579711  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:44:34 2023 ] 	Mean test loss of 3 batches: 1.3220290740331013.
+[ Sat Aug  5 22:44:34 2023 ] 	Top1: 53.62%
+[ Sat Aug  5 22:44:34 2023 ] 	Top5: 92.75%
+[ Sat Aug  5 22:44:34 2023 ] Training epoch: 16
+100%|██████████| 3/3 [00:26<00:00,  8.92s/it]
+[ Sat Aug  5 22:45:01 2023 ] 	Mean training loss: 1.3719.  Mean training acc: 52.08%.
+[ Sat Aug  5 22:45:01 2023 ] 	Learning Rate: 0.0096
+[ Sat Aug  5 22:45:01 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 22:45:01 2023 ] Eval epoch: 16
+100%|██████████| 3/3 [00:22<00:00,  7.37s/it]
+Accuracy:  0.5652173913043478  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:45:23 2023 ] 	Mean test loss of 3 batches: 1.2659837404886882.
+[ Sat Aug  5 22:45:23 2023 ] 	Top1: 56.52%
+[ Sat Aug  5 22:45:23 2023 ] 	Top5: 92.75%
+[ Sat Aug  5 22:45:23 2023 ] Training epoch: 17
+100%|██████████| 3/3 [00:26<00:00,  8.85s/it]
+[ Sat Aug  5 22:45:50 2023 ] 	Mean training loss: 1.1749.  Mean training acc: 61.46%.
+[ Sat Aug  5 22:45:50 2023 ] 	Learning Rate: 0.0095
+[ Sat Aug  5 22:45:50 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 22:45:50 2023 ] Eval epoch: 17
+100%|██████████| 3/3 [00:22<00:00,  7.35s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.5797101449275363  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:46:12 2023 ] 	Mean test loss of 3 batches: 1.2292699416478474.
+[ Sat Aug  5 22:46:12 2023 ] 	Top1: 57.97%
+[ Sat Aug  5 22:46:12 2023 ] 	Top5: 97.10%
+[ Sat Aug  5 22:46:12 2023 ] Training epoch: 18
+100%|██████████| 3/3 [00:26<00:00,  8.92s/it]
+[ Sat Aug  5 22:46:39 2023 ] 	Mean training loss: 1.2142.  Mean training acc: 63.54%.
+[ Sat Aug  5 22:46:39 2023 ] 	Learning Rate: 0.0095
+[ Sat Aug  5 22:46:39 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:46:39 2023 ] Eval epoch: 18
+100%|██████████| 3/3 [00:22<00:00,  7.42s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.6086956521739131  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:47:01 2023 ] 	Mean test loss of 3 batches: 1.1648107767105103.
+[ Sat Aug  5 22:47:01 2023 ] 	Top1: 60.87%
+[ Sat Aug  5 22:47:01 2023 ] 	Top5: 95.65%
+[ Sat Aug  5 22:47:01 2023 ] Training epoch: 19
+100%|██████████| 3/3 [00:26<00:00,  8.92s/it]
+[ Sat Aug  5 22:47:28 2023 ] 	Mean training loss: 1.1910.  Mean training acc: 56.25%.
+[ Sat Aug  5 22:47:28 2023 ] 	Learning Rate: 0.0094
+[ Sat Aug  5 22:47:28 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:47:28 2023 ] Eval epoch: 19
+100%|██████████| 3/3 [00:22<00:00,  7.38s/it]
+Accuracy:  0.6231884057971014  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:47:50 2023 ] 	Mean test loss of 3 batches: 1.1315239270528157.
+[ Sat Aug  5 22:47:50 2023 ] 	Top1: 62.32%
+[ Sat Aug  5 22:47:50 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 22:47:50 2023 ] Training epoch: 20
+100%|██████████| 3/3 [00:26<00:00,  8.91s/it]
+[ Sat Aug  5 22:48:17 2023 ] 	Mean training loss: 1.1266.  Mean training acc: 56.25%.
+[ Sat Aug  5 22:48:17 2023 ] 	Learning Rate: 0.0093
+[ Sat Aug  5 22:48:17 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 22:48:17 2023 ] Eval epoch: 20
+100%|██████████| 3/3 [00:22<00:00,  7.48s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.6521739130434783  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:48:40 2023 ] 	Mean test loss of 3 batches: 1.0979636510213215.
+[ Sat Aug  5 22:48:40 2023 ] 	Top1: 65.22%
+[ Sat Aug  5 22:48:40 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 22:48:40 2023 ] Training epoch: 21
+100%|██████████| 3/3 [00:26<00:00,  8.92s/it]
+[ Sat Aug  5 22:49:06 2023 ] 	Mean training loss: 1.1838.  Mean training acc: 59.38%.
+[ Sat Aug  5 22:49:06 2023 ] 	Learning Rate: 0.0092
+[ Sat Aug  5 22:49:06 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:49:07 2023 ] Eval epoch: 21
+100%|██████████| 3/3 [00:22<00:00,  7.36s/it]
+Accuracy:  0.6666666666666666  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:49:29 2023 ] 	Mean test loss of 3 batches: 1.0571560859680176.
+[ Sat Aug  5 22:49:29 2023 ] 	Top1: 66.67%
+[ Sat Aug  5 22:49:29 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 22:49:29 2023 ] Training epoch: 22
+100%|██████████| 3/3 [00:26<00:00,  8.92s/it]
+[ Sat Aug  5 22:49:56 2023 ] 	Mean training loss: 1.2284.  Mean training acc: 59.38%.
+[ Sat Aug  5 22:49:56 2023 ] 	Learning Rate: 0.0091
+[ Sat Aug  5 22:49:56 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:49:56 2023 ] Eval epoch: 22
+100%|██████████| 3/3 [00:22<00:00,  7.42s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.6811594202898551  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:50:18 2023 ] 	Mean test loss of 3 batches: 1.0496100982030232.
+[ Sat Aug  5 22:50:18 2023 ] 	Top1: 68.12%
+[ Sat Aug  5 22:50:18 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 22:50:18 2023 ] Training epoch: 23
+100%|██████████| 3/3 [00:26<00:00,  8.99s/it]
+[ Sat Aug  5 22:50:45 2023 ] 	Mean training loss: 1.1318.  Mean training acc: 64.58%.
+[ Sat Aug  5 22:50:45 2023 ] 	Learning Rate: 0.0090
+[ Sat Aug  5 22:50:45 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:50:45 2023 ] Eval epoch: 23
+100%|██████████| 3/3 [00:22<00:00,  7.55s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.7101449275362319  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:51:08 2023 ] 	Mean test loss of 3 batches: 1.034317155679067.
+[ Sat Aug  5 22:51:08 2023 ] 	Top1: 71.01%
+[ Sat Aug  5 22:51:08 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 22:51:08 2023 ] Training epoch: 24
+100%|██████████| 3/3 [00:26<00:00,  8.94s/it]
+[ Sat Aug  5 22:51:35 2023 ] 	Mean training loss: 1.1177.  Mean training acc: 54.17%.
+[ Sat Aug  5 22:51:35 2023 ] 	Learning Rate: 0.0089
+[ Sat Aug  5 22:51:35 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:51:35 2023 ] Eval epoch: 24
+100%|██████████| 3/3 [00:22<00:00,  7.42s/it]
+Accuracy:  0.6811594202898551  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:51:57 2023 ] 	Mean test loss of 3 batches: 1.0212049285570781.
+[ Sat Aug  5 22:51:57 2023 ] 	Top1: 68.12%
+[ Sat Aug  5 22:51:57 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 22:51:57 2023 ] Training epoch: 25
+100%|██████████| 3/3 [00:26<00:00,  8.93s/it]
+[ Sat Aug  5 22:52:24 2023 ] 	Mean training loss: 1.1144.  Mean training acc: 61.46%.
+[ Sat Aug  5 22:52:24 2023 ] 	Learning Rate: 0.0087
+[ Sat Aug  5 22:52:24 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:52:24 2023 ] Eval epoch: 25
+100%|██████████| 3/3 [00:22<00:00,  7.49s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.6666666666666666  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:52:47 2023 ] 	Mean test loss of 3 batches: 0.9823748469352722.
+[ Sat Aug  5 22:52:47 2023 ] 	Top1: 66.67%
+[ Sat Aug  5 22:52:47 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 22:52:47 2023 ] Training epoch: 26
+100%|██████████| 3/3 [00:26<00:00,  8.94s/it]
+[ Sat Aug  5 22:53:14 2023 ] 	Mean training loss: 1.0512.  Mean training acc: 62.50%.
+[ Sat Aug  5 22:53:14 2023 ] 	Learning Rate: 0.0086
+[ Sat Aug  5 22:53:14 2023 ] 	Time consumption: [Data]79%, [Network]21%
+[ Sat Aug  5 22:53:14 2023 ] Eval epoch: 26
+100%|██████████| 3/3 [00:22<00:00,  7.42s/it]
+Accuracy:  0.6666666666666666  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:53:36 2023 ] 	Mean test loss of 3 batches: 0.9815889795621237.
+[ Sat Aug  5 22:53:36 2023 ] 	Top1: 66.67%
+[ Sat Aug  5 22:53:36 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 22:53:36 2023 ] Training epoch: 27
+100%|██████████| 3/3 [00:26<00:00,  8.91s/it]
+[ Sat Aug  5 22:54:03 2023 ] 	Mean training loss: 1.1526.  Mean training acc: 62.50%.
+[ Sat Aug  5 22:54:03 2023 ] 	Learning Rate: 0.0085
+[ Sat Aug  5 22:54:03 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:54:03 2023 ] Eval epoch: 27
+100%|██████████| 3/3 [00:22<00:00,  7.43s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.7101449275362319  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:54:25 2023 ] 	Mean test loss of 3 batches: 0.9614720543225607.
+[ Sat Aug  5 22:54:25 2023 ] 	Top1: 71.01%
+[ Sat Aug  5 22:54:25 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 22:54:25 2023 ] Training epoch: 28
+100%|██████████| 3/3 [00:27<00:00,  9.04s/it]
+[ Sat Aug  5 22:54:52 2023 ] 	Mean training loss: 1.1384.  Mean training acc: 63.54%.
+[ Sat Aug  5 22:54:52 2023 ] 	Learning Rate: 0.0083
+[ Sat Aug  5 22:54:52 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:54:53 2023 ] Eval epoch: 28
+100%|██████████| 3/3 [00:22<00:00,  7.43s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.7246376811594203  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:55:15 2023 ] 	Mean test loss of 3 batches: 0.9249437053998312.
+[ Sat Aug  5 22:55:15 2023 ] 	Top1: 72.46%
+[ Sat Aug  5 22:55:15 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 22:55:15 2023 ] Training epoch: 29
+100%|██████████| 3/3 [00:26<00:00,  8.93s/it]
+[ Sat Aug  5 22:55:42 2023 ] 	Mean training loss: 0.9870.  Mean training acc: 67.71%.
+[ Sat Aug  5 22:55:42 2023 ] 	Learning Rate: 0.0082
+[ Sat Aug  5 22:55:42 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:55:42 2023 ] Eval epoch: 29
+100%|██████████| 3/3 [00:22<00:00,  7.43s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.7681159420289855  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:56:04 2023 ] 	Mean test loss of 3 batches: 0.8881500959396362.
+[ Sat Aug  5 22:56:04 2023 ] 	Top1: 76.81%
+[ Sat Aug  5 22:56:04 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 22:56:04 2023 ] Training epoch: 30
+100%|██████████| 3/3 [00:26<00:00,  8.93s/it]
+[ Sat Aug  5 22:56:31 2023 ] 	Mean training loss: 0.9556.  Mean training acc: 67.71%.
+[ Sat Aug  5 22:56:31 2023 ] 	Learning Rate: 0.0081
+[ Sat Aug  5 22:56:31 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 22:56:31 2023 ] Eval epoch: 30
+100%|██████████| 3/3 [00:22<00:00,  7.48s/it]
+Accuracy:  0.7536231884057971  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:56:54 2023 ] 	Mean test loss of 3 batches: 0.8787566224733988.
+[ Sat Aug  5 22:56:54 2023 ] 	Top1: 75.36%
+[ Sat Aug  5 22:56:54 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 22:56:54 2023 ] Training epoch: 31
+100%|██████████| 3/3 [00:26<00:00,  8.94s/it]
+[ Sat Aug  5 22:57:20 2023 ] 	Mean training loss: 0.9879.  Mean training acc: 69.79%.
+[ Sat Aug  5 22:57:20 2023 ] 	Learning Rate: 0.0079
+[ Sat Aug  5 22:57:20 2023 ] 	Time consumption: [Data]79%, [Network]21%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 22:57:21 2023 ] Eval epoch: 31
+100%|██████████| 3/3 [00:22<00:00,  7.45s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.7536231884057971  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:57:43 2023 ] 	Mean test loss of 3 batches: 0.8703036506970724.
+[ Sat Aug  5 22:57:43 2023 ] 	Top1: 75.36%
+[ Sat Aug  5 22:57:43 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 22:57:43 2023 ] Training epoch: 32
+100%|██████████| 3/3 [00:26<00:00,  8.94s/it]
+[ Sat Aug  5 22:58:10 2023 ] 	Mean training loss: 1.0504.  Mean training acc: 65.62%.
+[ Sat Aug  5 22:58:10 2023 ] 	Learning Rate: 0.0078
+[ Sat Aug  5 22:58:10 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 22:58:10 2023 ] Eval epoch: 32
+100%|██████████| 3/3 [00:22<00:00,  7.36s/it]
+Accuracy:  0.7536231884057971  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:58:32 2023 ] 	Mean test loss of 3 batches: 0.8452677329381307.
+[ Sat Aug  5 22:58:32 2023 ] 	Top1: 75.36%
+[ Sat Aug  5 22:58:32 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 22:58:32 2023 ] Training epoch: 33
+100%|██████████| 3/3 [00:26<00:00,  8.98s/it]
+[ Sat Aug  5 22:58:59 2023 ] 	Mean training loss: 1.0720.  Mean training acc: 62.50%.
+[ Sat Aug  5 22:58:59 2023 ] 	Learning Rate: 0.0076
+[ Sat Aug  5 22:58:59 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 22:58:59 2023 ] Eval epoch: 33
+100%|██████████| 3/3 [00:22<00:00,  7.42s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.7681159420289855  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 22:59:22 2023 ] 	Mean test loss of 3 batches: 0.8562290469805399.
+[ Sat Aug  5 22:59:22 2023 ] 	Top1: 76.81%
+[ Sat Aug  5 22:59:22 2023 ] 	Top5: 97.10%
+[ Sat Aug  5 22:59:22 2023 ] Training epoch: 34
+100%|██████████| 3/3 [00:26<00:00,  8.94s/it]
+[ Sat Aug  5 22:59:48 2023 ] 	Mean training loss: 0.9519.  Mean training acc: 69.79%.
+[ Sat Aug  5 22:59:48 2023 ] 	Learning Rate: 0.0074
+[ Sat Aug  5 22:59:48 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 22:59:49 2023 ] Eval epoch: 34
+100%|██████████| 3/3 [00:22<00:00,  7.40s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.7681159420289855  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:00:11 2023 ] 	Mean test loss of 3 batches: 0.8398820161819458.
+[ Sat Aug  5 23:00:11 2023 ] 	Top1: 76.81%
+[ Sat Aug  5 23:00:11 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:00:11 2023 ] Training epoch: 35
+100%|██████████| 3/3 [00:29<00:00,  9.74s/it]
+[ Sat Aug  5 23:00:40 2023 ] 	Mean training loss: 0.8841.  Mean training acc: 78.12%.
+[ Sat Aug  5 23:00:40 2023 ] 	Learning Rate: 0.0073
+[ Sat Aug  5 23:00:40 2023 ] 	Time consumption: [Data]79%, [Network]21%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:00:41 2023 ] Eval epoch: 35
+100%|██████████| 3/3 [00:25<00:00,  8.54s/it]
+Accuracy:  0.782608695652174  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:01:06 2023 ] 	Mean test loss of 3 batches: 0.8198006351788839.
+[ Sat Aug  5 23:01:06 2023 ] 	Top1: 78.26%
+[ Sat Aug  5 23:01:06 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:01:06 2023 ] Training epoch: 36
+100%|██████████| 3/3 [00:30<00:00, 10.28s/it]
+[ Sat Aug  5 23:01:37 2023 ] 	Mean training loss: 0.9546.  Mean training acc: 69.79%.
+[ Sat Aug  5 23:01:37 2023 ] 	Learning Rate: 0.0071
+[ Sat Aug  5 23:01:37 2023 ] 	Time consumption: [Data]80%, [Network]20%
+[ Sat Aug  5 23:01:37 2023 ] Eval epoch: 36
+100%|██████████| 3/3 [00:25<00:00,  8.56s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.782608695652174  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:02:03 2023 ] 	Mean test loss of 3 batches: 0.7989278038342794.
+[ Sat Aug  5 23:02:03 2023 ] 	Top1: 78.26%
+[ Sat Aug  5 23:02:03 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:02:03 2023 ] Training epoch: 37
+100%|██████████| 3/3 [00:27<00:00,  9.11s/it]
+[ Sat Aug  5 23:02:30 2023 ] 	Mean training loss: 0.8191.  Mean training acc: 78.12%.
+[ Sat Aug  5 23:02:30 2023 ] 	Learning Rate: 0.0070
+[ Sat Aug  5 23:02:30 2023 ] 	Time consumption: [Data]79%, [Network]21%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:02:31 2023 ] Eval epoch: 37
+100%|██████████| 3/3 [00:22<00:00,  7.55s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.782608695652174  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:02:53 2023 ] 	Mean test loss of 3 batches: 0.7964575290679932.
+[ Sat Aug  5 23:02:53 2023 ] 	Top1: 78.26%
+[ Sat Aug  5 23:02:53 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:02:53 2023 ] Training epoch: 38
+100%|██████████| 3/3 [00:27<00:00,  9.02s/it]
+[ Sat Aug  5 23:03:20 2023 ] 	Mean training loss: 0.8830.  Mean training acc: 73.96%.
+[ Sat Aug  5 23:03:20 2023 ] 	Learning Rate: 0.0068
+[ Sat Aug  5 23:03:20 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:03:21 2023 ] Eval epoch: 38
+100%|██████████| 3/3 [00:22<00:00,  7.44s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8405797101449275  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:03:43 2023 ] 	Mean test loss of 3 batches: 0.7677720387776693.
+[ Sat Aug  5 23:03:43 2023 ] 	Top1: 84.06%
+[ Sat Aug  5 23:03:43 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:03:43 2023 ] Training epoch: 39
+100%|██████████| 3/3 [00:26<00:00,  8.95s/it]
+[ Sat Aug  5 23:04:10 2023 ] 	Mean training loss: 0.8430.  Mean training acc: 76.04%.
+[ Sat Aug  5 23:04:10 2023 ] 	Learning Rate: 0.0066
+[ Sat Aug  5 23:04:10 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:04:10 2023 ] Eval epoch: 39
+100%|██████████| 3/3 [00:22<00:00,  7.48s/it]
+Accuracy:  0.8260869565217391  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:04:32 2023 ] 	Mean test loss of 3 batches: 0.7489969730377197.
+[ Sat Aug  5 23:04:32 2023 ] 	Top1: 82.61%
+[ Sat Aug  5 23:04:32 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:04:32 2023 ] Training epoch: 40
+100%|██████████| 3/3 [00:27<00:00,  9.05s/it]
+[ Sat Aug  5 23:05:00 2023 ] 	Mean training loss: 0.7896.  Mean training acc: 82.29%.
+[ Sat Aug  5 23:05:00 2023 ] 	Learning Rate: 0.0064
+[ Sat Aug  5 23:05:00 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:05:00 2023 ] Eval epoch: 40
+100%|██████████| 3/3 [00:22<00:00,  7.49s/it]
+Accuracy:  0.855072463768116  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:05:22 2023 ] 	Mean test loss of 3 batches: 0.7267300883928934.
+[ Sat Aug  5 23:05:22 2023 ] 	Top1: 85.51%
+[ Sat Aug  5 23:05:22 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:05:22 2023 ] Training epoch: 41
+100%|██████████| 3/3 [00:26<00:00,  9.00s/it]
+[ Sat Aug  5 23:05:49 2023 ] 	Mean training loss: 0.9314.  Mean training acc: 67.71%.
+[ Sat Aug  5 23:05:49 2023 ] 	Learning Rate: 0.0063
+[ Sat Aug  5 23:05:49 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:05:50 2023 ] Eval epoch: 41
+100%|██████████| 3/3 [00:22<00:00,  7.46s/it]
+Accuracy:  0.8695652173913043  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:06:12 2023 ] 	Mean test loss of 3 batches: 0.7002459565798441.
+[ Sat Aug  5 23:06:12 2023 ] 	Top1: 86.96%
+[ Sat Aug  5 23:06:12 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:06:12 2023 ] Training epoch: 42
+100%|██████████| 3/3 [00:26<00:00,  9.00s/it]
+[ Sat Aug  5 23:06:39 2023 ] 	Mean training loss: 0.8750.  Mean training acc: 77.08%.
+[ Sat Aug  5 23:06:39 2023 ] 	Learning Rate: 0.0061
+[ Sat Aug  5 23:06:39 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:06:39 2023 ] Eval epoch: 42
+100%|██████████| 3/3 [00:22<00:00,  7.49s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:07:02 2023 ] 	Mean test loss of 3 batches: 0.6812954545021057.
+[ Sat Aug  5 23:07:02 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:07:02 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:07:02 2023 ] Training epoch: 43
+100%|██████████| 3/3 [00:26<00:00,  8.93s/it]
+[ Sat Aug  5 23:07:28 2023 ] 	Mean training loss: 0.8545.  Mean training acc: 73.96%.
+[ Sat Aug  5 23:07:28 2023 ] 	Learning Rate: 0.0059
+[ Sat Aug  5 23:07:28 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:07:29 2023 ] Eval epoch: 43
+100%|██████████| 3/3 [00:22<00:00,  7.55s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:07:51 2023 ] 	Mean test loss of 3 batches: 0.6914125482241312.
+[ Sat Aug  5 23:07:51 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:07:51 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:07:51 2023 ] Training epoch: 44
+100%|██████████| 3/3 [00:26<00:00,  8.94s/it]
+[ Sat Aug  5 23:08:18 2023 ] 	Mean training loss: 0.8466.  Mean training acc: 75.00%.
+[ Sat Aug  5 23:08:18 2023 ] 	Learning Rate: 0.0057
+[ Sat Aug  5 23:08:18 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:08:18 2023 ] Eval epoch: 44
+100%|██████████| 3/3 [00:22<00:00,  7.43s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:08:41 2023 ] 	Mean test loss of 3 batches: 0.6982751488685608.
+[ Sat Aug  5 23:08:41 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:08:41 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:08:41 2023 ] Training epoch: 45
+100%|██████████| 3/3 [00:27<00:00,  9.05s/it]
+[ Sat Aug  5 23:09:08 2023 ] 	Mean training loss: 0.8986.  Mean training acc: 70.83%.
+[ Sat Aug  5 23:09:08 2023 ] 	Learning Rate: 0.0055
+[ Sat Aug  5 23:09:08 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:09:08 2023 ] Eval epoch: 45
+100%|██████████| 3/3 [00:22<00:00,  7.44s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8695652173913043  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:09:30 2023 ] 	Mean test loss of 3 batches: 0.6915087302525839.
+[ Sat Aug  5 23:09:30 2023 ] 	Top1: 86.96%
+[ Sat Aug  5 23:09:30 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:09:30 2023 ] Training epoch: 46
+100%|██████████| 3/3 [00:26<00:00,  8.97s/it]
+[ Sat Aug  5 23:09:57 2023 ] 	Mean training loss: 0.8169.  Mean training acc: 76.04%.
+[ Sat Aug  5 23:09:57 2023 ] 	Learning Rate: 0.0053
+[ Sat Aug  5 23:09:57 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:09:57 2023 ] Eval epoch: 46
+100%|██████████| 3/3 [00:22<00:00,  7.44s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:10:20 2023 ] 	Mean test loss of 3 batches: 0.6865171591440836.
+[ Sat Aug  5 23:10:20 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:10:20 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:10:20 2023 ] Training epoch: 47
+100%|██████████| 3/3 [00:26<00:00,  8.94s/it]
+[ Sat Aug  5 23:10:47 2023 ] 	Mean training loss: 0.7052.  Mean training acc: 84.38%.
+[ Sat Aug  5 23:10:47 2023 ] 	Learning Rate: 0.0052
+[ Sat Aug  5 23:10:47 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:10:47 2023 ] Eval epoch: 47
+100%|██████████| 3/3 [00:22<00:00,  7.48s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.855072463768116  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:11:09 2023 ] 	Mean test loss of 3 batches: 0.6787437399228414.
+[ Sat Aug  5 23:11:09 2023 ] 	Top1: 85.51%
+[ Sat Aug  5 23:11:09 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:11:09 2023 ] Training epoch: 48
+100%|██████████| 3/3 [00:26<00:00,  8.92s/it]
+[ Sat Aug  5 23:11:36 2023 ] 	Mean training loss: 0.7744.  Mean training acc: 77.08%.
+[ Sat Aug  5 23:11:36 2023 ] 	Learning Rate: 0.0050
+[ Sat Aug  5 23:11:36 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:11:36 2023 ] Eval epoch: 48
+100%|██████████| 3/3 [00:22<00:00,  7.42s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.855072463768116  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:11:59 2023 ] 	Mean test loss of 3 batches: 0.6493164499600729.
+[ Sat Aug  5 23:11:59 2023 ] 	Top1: 85.51%
+[ Sat Aug  5 23:11:59 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:11:59 2023 ] Training epoch: 49
+100%|██████████| 3/3 [00:26<00:00,  8.91s/it]
+[ Sat Aug  5 23:12:25 2023 ] 	Mean training loss: 0.8976.  Mean training acc: 68.75%.
+[ Sat Aug  5 23:12:25 2023 ] 	Learning Rate: 0.0048
+[ Sat Aug  5 23:12:25 2023 ] 	Time consumption: [Data]79%, [Network]21%
+[ Sat Aug  5 23:12:25 2023 ] Eval epoch: 49
+100%|██████████| 3/3 [00:22<00:00,  7.44s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8695652173913043  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:12:48 2023 ] 	Mean test loss of 3 batches: 0.6233627498149872.
+[ Sat Aug  5 23:12:48 2023 ] 	Top1: 86.96%
+[ Sat Aug  5 23:12:48 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:12:48 2023 ] Training epoch: 50
+100%|██████████| 3/3 [00:26<00:00,  8.91s/it]
+[ Sat Aug  5 23:13:15 2023 ] 	Mean training loss: 0.7017.  Mean training acc: 83.33%.
+[ Sat Aug  5 23:13:15 2023 ] 	Learning Rate: 0.0046
+[ Sat Aug  5 23:13:15 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:13:15 2023 ] Eval epoch: 50
+100%|██████████| 3/3 [00:22<00:00,  7.42s/it]
+Accuracy:  0.8695652173913043  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:13:37 2023 ] 	Mean test loss of 3 batches: 0.6109356085459391.
+[ Sat Aug  5 23:13:37 2023 ] 	Top1: 86.96%
+[ Sat Aug  5 23:13:37 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:13:37 2023 ] Training epoch: 51
+100%|██████████| 3/3 [00:26<00:00,  8.93s/it]
+[ Sat Aug  5 23:14:04 2023 ] 	Mean training loss: 0.7237.  Mean training acc: 79.17%.
+[ Sat Aug  5 23:14:04 2023 ] 	Learning Rate: 0.0044
+[ Sat Aug  5 23:14:04 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:14:04 2023 ] Eval epoch: 51
+100%|██████████| 3/3 [00:22<00:00,  7.49s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8695652173913043  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:14:26 2023 ] 	Mean test loss of 3 batches: 0.6163447499275208.
+[ Sat Aug  5 23:14:26 2023 ] 	Top1: 86.96%
+[ Sat Aug  5 23:14:26 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:14:27 2023 ] Training epoch: 52
+100%|██████████| 3/3 [00:26<00:00,  8.95s/it]
+[ Sat Aug  5 23:14:53 2023 ] 	Mean training loss: 0.8305.  Mean training acc: 73.96%.
+[ Sat Aug  5 23:14:53 2023 ] 	Learning Rate: 0.0042
+[ Sat Aug  5 23:14:53 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:14:54 2023 ] Eval epoch: 52
+100%|██████████| 3/3 [00:23<00:00,  7.81s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:15:17 2023 ] 	Mean test loss of 3 batches: 0.6133889059225718.
+[ Sat Aug  5 23:15:17 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:15:17 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:15:17 2023 ] Training epoch: 53
+100%|██████████| 3/3 [00:31<00:00, 10.34s/it]
+[ Sat Aug  5 23:15:48 2023 ] 	Mean training loss: 0.8558.  Mean training acc: 73.96%.
+[ Sat Aug  5 23:15:48 2023 ] 	Learning Rate: 0.0041
+[ Sat Aug  5 23:15:48 2023 ] 	Time consumption: [Data]81%, [Network]19%
+[ Sat Aug  5 23:15:48 2023 ] Eval epoch: 53
+100%|██████████| 3/3 [00:26<00:00,  8.68s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:16:14 2023 ] 	Mean test loss of 3 batches: 0.6150710980097452.
+[ Sat Aug  5 23:16:14 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:16:14 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:16:14 2023 ] Training epoch: 54
+100%|██████████| 3/3 [00:27<00:00,  9.08s/it]
+[ Sat Aug  5 23:16:42 2023 ] 	Mean training loss: 0.8399.  Mean training acc: 72.92%.
+[ Sat Aug  5 23:16:42 2023 ] 	Learning Rate: 0.0039
+[ Sat Aug  5 23:16:42 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:16:42 2023 ] Eval epoch: 54
+100%|██████████| 3/3 [00:22<00:00,  7.52s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8985507246376812  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:17:04 2023 ] 	Mean test loss of 3 batches: 0.6261273622512817.
+[ Sat Aug  5 23:17:04 2023 ] 	Top1: 89.86%
+[ Sat Aug  5 23:17:04 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:17:04 2023 ] Training epoch: 55
+100%|██████████| 3/3 [00:27<00:00,  9.02s/it]
+[ Sat Aug  5 23:17:31 2023 ] 	Mean training loss: 0.7848.  Mean training acc: 78.12%.
+[ Sat Aug  5 23:17:31 2023 ] 	Learning Rate: 0.0037
+[ Sat Aug  5 23:17:31 2023 ] 	Time consumption: [Data]79%, [Network]21%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:17:32 2023 ] Eval epoch: 55
+100%|██████████| 3/3 [00:22<00:00,  7.44s/it]
+Accuracy:  0.8985507246376812  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:17:54 2023 ] 	Mean test loss of 3 batches: 0.6360972126324972.
+[ Sat Aug  5 23:17:54 2023 ] 	Top1: 89.86%
+[ Sat Aug  5 23:17:54 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:17:54 2023 ] Training epoch: 56
+100%|██████████| 3/3 [00:26<00:00,  8.93s/it]
+[ Sat Aug  5 23:18:21 2023 ] 	Mean training loss: 0.8342.  Mean training acc: 77.08%.
+[ Sat Aug  5 23:18:21 2023 ] 	Learning Rate: 0.0035
+[ Sat Aug  5 23:18:21 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:18:21 2023 ] Eval epoch: 56
+100%|██████████| 3/3 [00:22<00:00,  7.43s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:18:43 2023 ] 	Mean test loss of 3 batches: 0.6404822866121928.
+[ Sat Aug  5 23:18:43 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:18:43 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:18:43 2023 ] Training epoch: 57
+100%|██████████| 3/3 [00:26<00:00,  8.99s/it]
+[ Sat Aug  5 23:19:10 2023 ] 	Mean training loss: 0.7291.  Mean training acc: 80.21%.
+[ Sat Aug  5 23:19:10 2023 ] 	Learning Rate: 0.0033
+[ Sat Aug  5 23:19:10 2023 ] 	Time consumption: [Data]79%, [Network]21%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:19:11 2023 ] Eval epoch: 57
+100%|██████████| 3/3 [00:22<00:00,  7.50s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:19:33 2023 ] 	Mean test loss of 3 batches: 0.6380130052566528.
+[ Sat Aug  5 23:19:33 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:19:33 2023 ] 	Top5: 97.10%
+[ Sat Aug  5 23:19:33 2023 ] Training epoch: 58
+100%|██████████| 3/3 [00:26<00:00,  8.98s/it]
+[ Sat Aug  5 23:20:00 2023 ] 	Mean training loss: 0.7741.  Mean training acc: 78.12%.
+[ Sat Aug  5 23:20:00 2023 ] 	Learning Rate: 0.0032
+[ Sat Aug  5 23:20:00 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:20:00 2023 ] Eval epoch: 58
+100%|██████████| 3/3 [00:22<00:00,  7.49s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:20:23 2023 ] 	Mean test loss of 3 batches: 0.6313773592313131.
+[ Sat Aug  5 23:20:23 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:20:23 2023 ] 	Top5: 97.10%
+[ Sat Aug  5 23:20:23 2023 ] Training epoch: 59
+100%|██████████| 3/3 [00:26<00:00,  8.94s/it]
+[ Sat Aug  5 23:20:49 2023 ] 	Mean training loss: 0.7471.  Mean training acc: 82.29%.
+[ Sat Aug  5 23:20:49 2023 ] 	Learning Rate: 0.0030
+[ Sat Aug  5 23:20:49 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:20:50 2023 ] Eval epoch: 59
+100%|██████████| 3/3 [00:23<00:00,  7.82s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:21:13 2023 ] 	Mean test loss of 3 batches: 0.6317140857378641.
+[ Sat Aug  5 23:21:13 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:21:13 2023 ] 	Top5: 97.10%
+[ Sat Aug  5 23:21:13 2023 ] Training epoch: 60
+100%|██████████| 3/3 [00:26<00:00,  8.98s/it]
+[ Sat Aug  5 23:21:40 2023 ] 	Mean training loss: 0.7267.  Mean training acc: 78.12%.
+[ Sat Aug  5 23:21:40 2023 ] 	Learning Rate: 0.0028
+[ Sat Aug  5 23:21:40 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:21:40 2023 ] Eval epoch: 60
+100%|██████████| 3/3 [00:22<00:00,  7.45s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:22:03 2023 ] 	Mean test loss of 3 batches: 0.6197968522707621.
+[ Sat Aug  5 23:22:03 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:22:03 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:22:03 2023 ] Training epoch: 61
+100%|██████████| 3/3 [00:26<00:00,  8.92s/it]
+[ Sat Aug  5 23:22:29 2023 ] 	Mean training loss: 0.6959.  Mean training acc: 79.17%.
+[ Sat Aug  5 23:22:29 2023 ] 	Learning Rate: 0.0027
+[ Sat Aug  5 23:22:29 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:22:30 2023 ] Eval epoch: 61
+100%|██████████| 3/3 [00:22<00:00,  7.41s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:22:52 2023 ] 	Mean test loss of 3 batches: 0.6128279467423757.
+[ Sat Aug  5 23:22:52 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:22:52 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:22:52 2023 ] Training epoch: 62
+100%|██████████| 3/3 [00:26<00:00,  8.94s/it]
+[ Sat Aug  5 23:23:19 2023 ] 	Mean training loss: 0.6991.  Mean training acc: 79.17%.
+[ Sat Aug  5 23:23:19 2023 ] 	Learning Rate: 0.0025
+[ Sat Aug  5 23:23:19 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:23:19 2023 ] Eval epoch: 62
+100%|██████████| 3/3 [00:22<00:00,  7.48s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:23:41 2023 ] 	Mean test loss of 3 batches: 0.5986199577649435.
+[ Sat Aug  5 23:23:41 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:23:41 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:23:41 2023 ] Training epoch: 63
+100%|██████████| 3/3 [00:30<00:00, 10.08s/it]
+[ Sat Aug  5 23:24:12 2023 ] 	Mean training loss: 0.7966.  Mean training acc: 76.04%.
+[ Sat Aug  5 23:24:12 2023 ] 	Learning Rate: 0.0023
+[ Sat Aug  5 23:24:12 2023 ] 	Time consumption: [Data]80%, [Network]20%
+[ Sat Aug  5 23:24:12 2023 ] Eval epoch: 63
+100%|██████████| 3/3 [00:23<00:00,  7.85s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:24:35 2023 ] 	Mean test loss of 3 batches: 0.5976952910423279.
+[ Sat Aug  5 23:24:35 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:24:35 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:24:35 2023 ] Training epoch: 64
+100%|██████████| 3/3 [00:28<00:00,  9.34s/it]
+[ Sat Aug  5 23:25:03 2023 ] 	Mean training loss: 0.7096.  Mean training acc: 77.08%.
+[ Sat Aug  5 23:25:03 2023 ] 	Learning Rate: 0.0022
+[ Sat Aug  5 23:25:03 2023 ] 	Time consumption: [Data]79%, [Network]21%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:25:04 2023 ] Eval epoch: 64
+100%|██████████| 3/3 [00:22<00:00,  7.46s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:25:26 2023 ] 	Mean test loss of 3 batches: 0.5885619322458903.
+[ Sat Aug  5 23:25:26 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:25:26 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:25:26 2023 ] Training epoch: 65
+100%|██████████| 3/3 [00:26<00:00,  8.95s/it]
+[ Sat Aug  5 23:25:53 2023 ] 	Mean training loss: 0.7523.  Mean training acc: 72.92%.
+[ Sat Aug  5 23:25:53 2023 ] 	Learning Rate: 0.0020
+[ Sat Aug  5 23:25:53 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:25:53 2023 ] Eval epoch: 65
+100%|██████████| 3/3 [00:22<00:00,  7.45s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:26:16 2023 ] 	Mean test loss of 3 batches: 0.5792851150035858.
+[ Sat Aug  5 23:26:16 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:26:16 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:26:16 2023 ] Training epoch: 66
+100%|██████████| 3/3 [00:26<00:00,  8.94s/it]
+[ Sat Aug  5 23:26:42 2023 ] 	Mean training loss: 0.6985.  Mean training acc: 82.29%.
+[ Sat Aug  5 23:26:42 2023 ] 	Learning Rate: 0.0019
+[ Sat Aug  5 23:26:42 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:26:43 2023 ] Eval epoch: 66
+100%|██████████| 3/3 [00:22<00:00,  7.54s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:27:05 2023 ] 	Mean test loss of 3 batches: 0.579007069269816.
+[ Sat Aug  5 23:27:05 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:27:05 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:27:05 2023 ] Training epoch: 67
+100%|██████████| 3/3 [00:26<00:00,  8.98s/it]
+[ Sat Aug  5 23:27:32 2023 ] 	Mean training loss: 0.7003.  Mean training acc: 86.46%.
+[ Sat Aug  5 23:27:32 2023 ] 	Learning Rate: 0.0018
+[ Sat Aug  5 23:27:32 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:27:32 2023 ] Eval epoch: 67
+100%|██████████| 3/3 [00:22<00:00,  7.49s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:27:55 2023 ] 	Mean test loss of 3 batches: 0.5730701684951782.
+[ Sat Aug  5 23:27:55 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:27:55 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:27:55 2023 ] Training epoch: 68
+100%|██████████| 3/3 [00:26<00:00,  8.92s/it]
+[ Sat Aug  5 23:28:22 2023 ] 	Mean training loss: 0.8419.  Mean training acc: 77.08%.
+[ Sat Aug  5 23:28:22 2023 ] 	Learning Rate: 0.0016
+[ Sat Aug  5 23:28:22 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:28:22 2023 ] Eval epoch: 68
+100%|██████████| 3/3 [00:22<00:00,  7.50s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:28:44 2023 ] 	Mean test loss of 3 batches: 0.5808025002479553.
+[ Sat Aug  5 23:28:44 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:28:44 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:28:44 2023 ] Training epoch: 69
+100%|██████████| 3/3 [00:27<00:00,  9.12s/it]
+[ Sat Aug  5 23:29:12 2023 ] 	Mean training loss: 0.9995.  Mean training acc: 67.71%.
+[ Sat Aug  5 23:29:12 2023 ] 	Learning Rate: 0.0015
+[ Sat Aug  5 23:29:12 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:29:12 2023 ] Eval epoch: 69
+100%|██████████| 3/3 [00:22<00:00,  7.54s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:29:35 2023 ] 	Mean test loss of 3 batches: 0.5790148675441742.
+[ Sat Aug  5 23:29:35 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:29:35 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:29:35 2023 ] Training epoch: 70
+100%|██████████| 3/3 [00:26<00:00,  8.98s/it]
+[ Sat Aug  5 23:30:02 2023 ] 	Mean training loss: 0.7390.  Mean training acc: 78.12%.
+[ Sat Aug  5 23:30:02 2023 ] 	Learning Rate: 0.0014
+[ Sat Aug  5 23:30:02 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:30:02 2023 ] Eval epoch: 70
+100%|██████████| 3/3 [00:22<00:00,  7.45s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:30:24 2023 ] 	Mean test loss of 3 batches: 0.576652447382609.
+[ Sat Aug  5 23:30:24 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:30:24 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:30:24 2023 ] Training epoch: 71
+100%|██████████| 3/3 [00:26<00:00,  9.00s/it]
+[ Sat Aug  5 23:30:51 2023 ] 	Mean training loss: 0.7181.  Mean training acc: 78.12%.
+[ Sat Aug  5 23:30:51 2023 ] 	Learning Rate: 0.0012
+[ Sat Aug  5 23:30:51 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:30:51 2023 ] Eval epoch: 71
+100%|██████████| 3/3 [00:22<00:00,  7.48s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:31:14 2023 ] 	Mean test loss of 3 batches: 0.5750846068064371.
+[ Sat Aug  5 23:31:14 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:31:14 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:31:14 2023 ] Training epoch: 72
+100%|██████████| 3/3 [00:26<00:00,  8.92s/it]
+[ Sat Aug  5 23:31:41 2023 ] 	Mean training loss: 0.7026.  Mean training acc: 83.33%.
+[ Sat Aug  5 23:31:41 2023 ] 	Learning Rate: 0.0011
+[ Sat Aug  5 23:31:41 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:31:41 2023 ] Eval epoch: 72
+100%|██████████| 3/3 [00:22<00:00,  7.42s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:32:03 2023 ] 	Mean test loss of 3 batches: 0.5797014236450195.
+[ Sat Aug  5 23:32:03 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:32:03 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:32:03 2023 ] Training epoch: 73
+100%|██████████| 3/3 [00:27<00:00,  9.00s/it]
+[ Sat Aug  5 23:32:30 2023 ] 	Mean training loss: 0.6463.  Mean training acc: 84.38%.
+[ Sat Aug  5 23:32:30 2023 ] 	Learning Rate: 0.0010
+[ Sat Aug  5 23:32:30 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:32:30 2023 ] Eval epoch: 73
+100%|██████████| 3/3 [00:22<00:00,  7.46s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:32:53 2023 ] 	Mean test loss of 3 batches: 0.581872800985972.
+[ Sat Aug  5 23:32:53 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:32:53 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:32:53 2023 ] Training epoch: 74
+100%|██████████| 3/3 [00:26<00:00,  8.99s/it]
+[ Sat Aug  5 23:33:20 2023 ] 	Mean training loss: 0.7974.  Mean training acc: 76.04%.
+[ Sat Aug  5 23:33:20 2023 ] 	Learning Rate: 0.0009
+[ Sat Aug  5 23:33:20 2023 ] 	Time consumption: [Data]79%, [Network]21%
+[ Sat Aug  5 23:33:20 2023 ] Eval epoch: 74
+100%|██████████| 3/3 [00:21<00:00,  7.28s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:33:42 2023 ] 	Mean test loss of 3 batches: 0.5854750275611877.
+[ Sat Aug  5 23:33:42 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:33:42 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:33:42 2023 ] Training epoch: 75
+100%|██████████| 3/3 [00:26<00:00,  8.77s/it]
+[ Sat Aug  5 23:34:08 2023 ] 	Mean training loss: 0.6703.  Mean training acc: 81.25%.
+[ Sat Aug  5 23:34:08 2023 ] 	Learning Rate: 0.0008
+[ Sat Aug  5 23:34:08 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:34:08 2023 ] Eval epoch: 75
+100%|██████████| 3/3 [00:22<00:00,  7.51s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:34:31 2023 ] 	Mean test loss of 3 batches: 0.5788930157820383.
+[ Sat Aug  5 23:34:31 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:34:31 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:34:31 2023 ] Training epoch: 76
+100%|██████████| 3/3 [00:26<00:00,  8.97s/it]
+[ Sat Aug  5 23:34:58 2023 ] 	Mean training loss: 0.6980.  Mean training acc: 76.04%.
+[ Sat Aug  5 23:34:58 2023 ] 	Learning Rate: 0.0007
+[ Sat Aug  5 23:34:58 2023 ] 	Time consumption: [Data]78%, [Network]22%
+[ Sat Aug  5 23:34:58 2023 ] Eval epoch: 76
+100%|██████████| 3/3 [00:22<00:00,  7.44s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:35:20 2023 ] 	Mean test loss of 3 batches: 0.5774451394875845.
+[ Sat Aug  5 23:35:20 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:35:20 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:35:20 2023 ] Training epoch: 77
+100%|██████████| 3/3 [00:26<00:00,  8.92s/it]
+[ Sat Aug  5 23:35:47 2023 ] 	Mean training loss: 0.8058.  Mean training acc: 79.17%.
+[ Sat Aug  5 23:35:47 2023 ] 	Learning Rate: 0.0006
+[ Sat Aug  5 23:35:47 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:35:47 2023 ] Eval epoch: 77
+100%|██████████| 3/3 [00:22<00:00,  7.43s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:36:09 2023 ] 	Mean test loss of 3 batches: 0.5696638524532318.
+[ Sat Aug  5 23:36:09 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:36:09 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:36:09 2023 ] Training epoch: 78
+100%|██████████| 3/3 [00:26<00:00,  8.92s/it]
+[ Sat Aug  5 23:36:36 2023 ] 	Mean training loss: 0.7708.  Mean training acc: 82.29%.
+[ Sat Aug  5 23:36:36 2023 ] 	Learning Rate: 0.0005
+[ Sat Aug  5 23:36:36 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:36:36 2023 ] Eval epoch: 78
+100%|██████████| 3/3 [00:25<00:00,  8.36s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:37:02 2023 ] 	Mean test loss of 3 batches: 0.5630259017149607.
+[ Sat Aug  5 23:37:02 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:37:02 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:37:02 2023 ] Training epoch: 79
+100%|██████████| 3/3 [00:34<00:00, 11.36s/it]
+[ Sat Aug  5 23:37:36 2023 ] 	Mean training loss: 0.6893.  Mean training acc: 81.25%.
+[ Sat Aug  5 23:37:36 2023 ] 	Learning Rate: 0.0004
+[ Sat Aug  5 23:37:36 2023 ] 	Time consumption: [Data]82%, [Network]18%
+[ Sat Aug  5 23:37:36 2023 ] Eval epoch: 79
+100%|██████████| 3/3 [00:28<00:00,  9.55s/it]
+Accuracy:  0.8985507246376812  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:38:05 2023 ] 	Mean test loss of 3 batches: 0.5637442469596863.
+[ Sat Aug  5 23:38:05 2023 ] 	Top1: 89.86%
+[ Sat Aug  5 23:38:05 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:38:05 2023 ] Training epoch: 80
+100%|██████████| 3/3 [00:31<00:00, 10.42s/it]
+[ Sat Aug  5 23:38:36 2023 ] 	Mean training loss: 0.7362.  Mean training acc: 80.21%.
+[ Sat Aug  5 23:38:36 2023 ] 	Learning Rate: 0.0004
+[ Sat Aug  5 23:38:36 2023 ] 	Time consumption: [Data]81%, [Network]19%
+[ Sat Aug  5 23:38:36 2023 ] Eval epoch: 80
+100%|██████████| 3/3 [00:26<00:00,  8.72s/it]
+Accuracy:  0.8985507246376812  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:39:02 2023 ] 	Mean test loss of 3 batches: 0.5497115155061086.
+[ Sat Aug  5 23:39:02 2023 ] 	Top1: 89.86%
+[ Sat Aug  5 23:39:02 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:39:02 2023 ] Training epoch: 81
+100%|██████████| 3/3 [00:30<00:00, 10.24s/it]
+[ Sat Aug  5 23:39:33 2023 ] 	Mean training loss: 0.7446.  Mean training acc: 79.17%.
+[ Sat Aug  5 23:39:33 2023 ] 	Learning Rate: 0.0003
+[ Sat Aug  5 23:39:33 2023 ] 	Time consumption: [Data]80%, [Network]20%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:39:33 2023 ] Eval epoch: 81
+100%|██████████| 3/3 [00:25<00:00,  8.62s/it]
+Accuracy:  0.8985507246376812  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:39:59 2023 ] 	Mean test loss of 3 batches: 0.5457730889320374.
+[ Sat Aug  5 23:39:59 2023 ] 	Top1: 89.86%
+[ Sat Aug  5 23:39:59 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:39:59 2023 ] Training epoch: 82
+100%|██████████| 3/3 [00:30<00:00, 10.23s/it]
+[ Sat Aug  5 23:40:30 2023 ] 	Mean training loss: 0.6610.  Mean training acc: 80.21%.
+[ Sat Aug  5 23:40:30 2023 ] 	Learning Rate: 0.0002
+[ Sat Aug  5 23:40:30 2023 ] 	Time consumption: [Data]80%, [Network]20%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:40:30 2023 ] Eval epoch: 82
+100%|██████████| 3/3 [00:26<00:00,  8.68s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:40:56 2023 ] 	Mean test loss of 3 batches: 0.5529471238454183.
+[ Sat Aug  5 23:40:56 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:40:56 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:40:56 2023 ] Training epoch: 83
+100%|██████████| 3/3 [00:32<00:00, 10.91s/it]
+[ Sat Aug  5 23:41:29 2023 ] 	Mean training loss: 0.6901.  Mean training acc: 85.42%.
+[ Sat Aug  5 23:41:29 2023 ] 	Learning Rate: 0.0002
+[ Sat Aug  5 23:41:29 2023 ] 	Time consumption: [Data]82%, [Network]18%
+[ Sat Aug  5 23:41:29 2023 ] Eval epoch: 83
+100%|██████████| 3/3 [00:25<00:00,  8.65s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:41:55 2023 ] 	Mean test loss of 3 batches: 0.5563227832317352.
+[ Sat Aug  5 23:41:55 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:41:55 2023 ] 	Top5: 100.00%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:41:55 2023 ] Training epoch: 84
+100%|██████████| 3/3 [00:28<00:00,  9.48s/it]
+[ Sat Aug  5 23:42:24 2023 ] 	Mean training loss: 0.6630.  Mean training acc: 82.29%.
+[ Sat Aug  5 23:42:24 2023 ] 	Learning Rate: 0.0001
+[ Sat Aug  5 23:42:24 2023 ] 	Time consumption: [Data]79%, [Network]21%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:42:24 2023 ] Eval epoch: 84
+100%|██████████| 3/3 [00:23<00:00,  7.91s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:42:48 2023 ] 	Mean test loss of 3 batches: 0.5492117802302042.
+[ Sat Aug  5 23:42:48 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:42:48 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:42:48 2023 ] Training epoch: 85
+100%|██████████| 3/3 [00:27<00:00,  9.22s/it]
+[ Sat Aug  5 23:43:15 2023 ] 	Mean training loss: 0.7646.  Mean training acc: 82.29%.
+[ Sat Aug  5 23:43:15 2023 ] 	Learning Rate: 0.0001
+[ Sat Aug  5 23:43:15 2023 ] 	Time consumption: [Data]79%, [Network]21%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:43:15 2023 ] Eval epoch: 85
+100%|██████████| 3/3 [00:22<00:00,  7.63s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:43:38 2023 ] 	Mean test loss of 3 batches: 0.5510633488496145.
+[ Sat Aug  5 23:43:38 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:43:38 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:43:38 2023 ] Training epoch: 86
+100%|██████████| 3/3 [00:27<00:00,  9.21s/it]
+[ Sat Aug  5 23:44:06 2023 ] 	Mean training loss: 0.8611.  Mean training acc: 76.04%.
+[ Sat Aug  5 23:44:06 2023 ] 	Learning Rate: 0.0001
+[ Sat Aug  5 23:44:06 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:44:06 2023 ] Eval epoch: 86
+100%|██████████| 3/3 [00:22<00:00,  7.65s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:44:29 2023 ] 	Mean test loss of 3 batches: 0.5559157331784567.
+[ Sat Aug  5 23:44:29 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:44:29 2023 ] 	Top5: 100.00%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:44:29 2023 ] Training epoch: 87
+100%|██████████| 3/3 [00:27<00:00,  9.16s/it]
+[ Sat Aug  5 23:44:57 2023 ] 	Mean training loss: 0.7009.  Mean training acc: 79.17%.
+[ Sat Aug  5 23:44:57 2023 ] 	Learning Rate: 0.0000
+[ Sat Aug  5 23:44:57 2023 ] 	Time consumption: [Data]79%, [Network]21%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:44:57 2023 ] Eval epoch: 87
+100%|██████████| 3/3 [00:22<00:00,  7.64s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:45:20 2023 ] 	Mean test loss of 3 batches: 0.544951985279719.
+[ Sat Aug  5 23:45:20 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:45:20 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:45:20 2023 ] Training epoch: 88
+100%|██████████| 3/3 [00:27<00:00,  9.15s/it]
+[ Sat Aug  5 23:45:47 2023 ] 	Mean training loss: 0.6522.  Mean training acc: 84.38%.
+[ Sat Aug  5 23:45:47 2023 ] 	Learning Rate: 0.0000
+[ Sat Aug  5 23:45:47 2023 ] 	Time consumption: [Data]78%, [Network]22%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:45:48 2023 ] Eval epoch: 88
+100%|██████████| 3/3 [00:22<00:00,  7.63s/it]
+  0%|          | 0/3 [00:00<?, ?it/s]Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:46:10 2023 ] 	Mean test loss of 3 batches: 0.547603577375412.
+[ Sat Aug  5 23:46:10 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:46:10 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:46:10 2023 ] Training epoch: 89
+100%|██████████| 3/3 [00:27<00:00,  9.17s/it]
+[ Sat Aug  5 23:46:38 2023 ] 	Mean training loss: 0.6741.  Mean training acc: 83.33%.
+[ Sat Aug  5 23:46:38 2023 ] 	Learning Rate: 0.0000
+[ Sat Aug  5 23:46:38 2023 ] 	Time consumption: [Data]79%, [Network]21%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:46:38 2023 ] Eval epoch: 89
+100%|██████████| 3/3 [00:22<00:00,  7.57s/it]
+Accuracy:  0.8985507246376812  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:47:01 2023 ] 	Mean test loss of 3 batches: 0.5436499714851379.
+[ Sat Aug  5 23:47:01 2023 ] 	Top1: 89.86%
+[ Sat Aug  5 23:47:01 2023 ] 	Top5: 100.00%
+[ Sat Aug  5 23:47:01 2023 ] Training epoch: 90
+100%|██████████| 3/3 [00:27<00:00,  9.14s/it]
+[ Sat Aug  5 23:47:28 2023 ] 	Mean training loss: 0.6699.  Mean training acc: 79.17%.
+[ Sat Aug  5 23:47:28 2023 ] 	Learning Rate: 0.0000
+[ Sat Aug  5 23:47:28 2023 ] 	Time consumption: [Data]79%, [Network]21%
+[ Sat Aug  5 23:47:29 2023 ] Eval epoch: 90
+100%|██████████| 3/3 [00:22<00:00,  7.61s/it]
+Accuracy:  0.8840579710144928  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:47:51 2023 ] 	Mean test loss of 3 batches: 0.5364436606566111.
+[ Sat Aug  5 23:47:51 2023 ] 	Top1: 88.41%
+[ Sat Aug  5 23:47:51 2023 ] 	Top5: 100.00%
+  0%|          | 0/3 [00:00<?, ?it/s][ Sat Aug  5 23:47:53 2023 ] Eval epoch: 1
+100%|██████████| 3/3 [00:22<00:00,  7.56s/it]
+Accuracy:  0.8985507246376812  model:  ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/runs
+[ Sat Aug  5 23:48:15 2023 ] 	Mean test loss of 3 batches: 0.6261273622512817.
+[ Sat Aug  5 23:48:15 2023 ] 	Top1: 89.86%
+[ Sat Aug  5 23:48:15 2023 ] 	Top5: 98.55%
+[ Sat Aug  5 23:48:15 2023 ] Best accuracy: 0.8985507246376812
+[ Sat Aug  5 23:48:15 2023 ] Epoch number: 54
+[ Sat Aug  5 23:48:15 2023 ] Model name: ./work_dir/ntu_hdgcn/cross-subject/joint_CoM_2/
+[ Sat Aug  5 23:48:15 2023 ] Model total number of params: 356418
+[ Sat Aug  5 23:48:15 2023 ] Weight decay: 0.0004
+[ Sat Aug  5 23:48:15 2023 ] Base LR: 0.01
+[ Sat Aug  5 23:48:15 2023 ] Batch Size: 32
+[ Sat Aug  5 23:48:15 2023 ] Test Batch Size: 32
+[ Sat Aug  5 23:48:15 2023 ] seed: 1
+
+Process finished with exit code 0
